@@ -1,0 +1,17 @@
+
+<div *ngIf="hero_">
+    <div class="border m-5 p-5">
+        <h2>Hero detail Page</h2>
+        <div><span>ID: {{hero_.id}} /  
+            Name: {{hero_.name | uppercase}} </span></div>
+        <br>        
+        <label for="basic-url" class="form-label"><b>Selected Hero</b> </label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="name">Name</span>
+            <input type="text" class="form-control" id="name" [(ngModel)]="hero_.name" aria-describedby="basic-addon3">
+        </div>
+        
+        <input type="button" class="btn btn-warning mx-2" (click)="goBack()" value="Go back">
+    </div>
+</div>
+
